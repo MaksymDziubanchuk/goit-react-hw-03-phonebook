@@ -1,0 +1,21 @@
+.list {
+  list-style-type: disc;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.text {
+  margin-right: 24px;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: #fff;
+}
+
+.btn:active {
+  background-color: rgb(115, 115, 255);
+}
