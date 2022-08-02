@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import css from 'components/ContactForm/ContactForm.module.css';
 
@@ -8,6 +9,10 @@ export class ContactForm extends Component {
     number: '',
   };
 
+  static propTypes = {
+    addContact: PropTypes.func.isRequired,
+  };
+  
   handleChange = e => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });

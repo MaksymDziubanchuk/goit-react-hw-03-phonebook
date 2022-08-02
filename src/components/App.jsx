@@ -12,10 +12,6 @@ export class App extends Component {
     filter: '',
   };
 
-  handleFilterChange = e => {
-    this.setState({ filter: e.target.value });
-  };
-
   componentDidMount() {
     const localContacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(localContacts);
@@ -30,6 +26,10 @@ export class App extends Component {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
+
+  handleFilterChange = e => {
+    this.setState({ filter: e.target.value });
+  };
 
   addContact = (name, number) => {
     const { contacts } = this.state;
